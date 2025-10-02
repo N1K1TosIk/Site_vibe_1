@@ -1,0 +1,42 @@
+# Composer
+/vendor/
+composer.lock
+
+# Logs
+/logs/*.log
+/logs/*.txt
+
+# Temporary files
+/temp/
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+/tests/coverage/
+phpunit.xml
+
+# Environment files
+.env
+.env.local
+
+# Uploaded files (keep structure, ignore content)
+/uploads/documents/*/
+
+/uploads/documents/*.docx
+/uploads/documents/*.doc
+/uploads/documents/*.txt
+/uploads/documents/*.rtf
+
+# Keep upload directory structure
+!/uploads/documents/
+!/uploads/documents/.gitkeep 
