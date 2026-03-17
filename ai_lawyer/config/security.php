@@ -1,4 +1,9 @@
 <?php
+// Локальные секреты (не коммитить!): скопируйте security.local.php.example → security.local.php
+if (file_exists(__DIR__ . '/security.local.php')) {
+    require_once __DIR__ . '/security.local.php';
+}
+
 // ВАЖНО: session ini_set должны быть до session_start() и только если сессия не активна
 if (session_status() === PHP_SESSION_NONE) {
     ini_set('session.cookie_httponly', 1);
@@ -7,8 +12,8 @@ if (session_status() === PHP_SESSION_NONE) {
     ini_set('session.cookie_samesite', 'Strict');
 }
 
-// OpenAI API конфигурация
-define('OPENAI_API_KEY', '');
+// OpenAI API — задаётся через переменную окружения OPENAI_API_KEY (никогда не храните ключ в коде!)
+define('OPENAI_API_KEY', getenv('OPENAI_API_KEY') ?: '');
 
 class Security {
     // Соль для хеширования паролей

@@ -1,0 +1,9 @@
+<?php
+/**
+ * Локальные секреты — НЕ КОММИТИТЬ В GIT!
+ * Скопируйте этот файл как security.local.php и заполните значения.
+ * Файл security.local.php добавлен в .gitignore.
+ */
+
+// OpenAI API ключ (получить на https://platform.openai.com/api-keys)
+putenv('OPENAI_API_KEY=sk-your-key-here');

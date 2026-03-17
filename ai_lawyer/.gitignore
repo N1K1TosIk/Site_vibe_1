@@ -29,6 +29,9 @@ phpunit.xml
 .env
 .env.local
 
+# Локальные секреты (API ключи, pepper)
+config/security.local.php
+
 # Uploaded files (keep structure, ignore content)
 /uploads/documents/*/
 
